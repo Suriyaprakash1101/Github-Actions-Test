@@ -12,4 +12,13 @@ describe("Sample Test", () => {
 
   });
 
+  // Intentionally failing test
+  test("should render Welcome to Next.js", () => {
+    render(<h1>Hello World</h1>);
+
+    const heading = screen.getByText("Hello World");
+
+    expect(heading).toHaveTextContent("Welcome to Next.js");
+  });
+
 });
